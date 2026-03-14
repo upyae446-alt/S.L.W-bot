@@ -27,6 +27,7 @@ if __name__ == '__main__':
     bot_token = os.getenv("BOT_TOKEN")
     
     app = ApplicationBuilder().token(bot_token).build()
+print("Bot starting...")
     app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
     
     print("Business AI Bot is active...")
